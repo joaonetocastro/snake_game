@@ -1,8 +1,8 @@
 const BLOCK_SIZE = 20;
 const FPS = 5;
 const VELOCITY = 1;
-const BLOCKS_PER_ROW = 20;
-const BLOCKS_PER_COLUMN = 20;
+const BLOCKS_PER_ROW = 10;
+const BLOCKS_PER_COLUMN = 10;
 const CANVAS_SIZE = BLOCK_SIZE*BLOCKS_PER_ROW;
 
 const canvas = document.getElementById("canvas"); 

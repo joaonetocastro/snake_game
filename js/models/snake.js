@@ -42,11 +42,10 @@ const Snake = class{
         for(const block of this.tail){
             if(block == this.head){
                 context.fillStyle = "#333"; 
-                context.fillRect(block.x, block.y, BLOCK_SIZE, BLOCK_SIZE);
             }else{
                 context.fillStyle = "#444"; 
-                context.fillRect(block.x, block.y, BLOCK_SIZE, BLOCK_SIZE);
             }
+            context.fillRect(block.x, block.y, BLOCK_SIZE-1, BLOCK_SIZE-1);
         }     
     }
 }

@@ -36,10 +36,20 @@ class Game{
                 setTimeout(() => {
                     this.snake.tail.push(position);
                 }, 1000/FPS*this.snake.tail.length);
-                
-                this.fruit = new Fruit();
+
+                setTimeout(()=>{
+                  let fruitPositionIsValid;
+                  do{
+                    this.fruit = new Fruit();
+                  }while(this.fruitIsInsideTheSnake());
+                }, 1000/FPS);
             }
         }
+    }
+    fruitIsInsideTheSnake(){
+      return this.snake.tail.filter((pos) => {
+        return this.fruit.x === pos.x && this.fruit.y === pos.y;
+      }).length >= 1;
     }
     updateScore(){
         const scoreEl = document.getElementById('score');

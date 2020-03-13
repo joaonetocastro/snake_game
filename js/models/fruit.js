@@ -6,6 +6,6 @@ const Fruit = class{
     }
     draw(context){
         context.fillStyle = "#5b5"; 
-        context.fillRect(this.x, this.y, BLOCK_SIZE, BLOCK_SIZE); 
+        context.fillRect(this.x, this.y, BLOCK_SIZE-1, BLOCK_SIZE-1); 
     }
 };
